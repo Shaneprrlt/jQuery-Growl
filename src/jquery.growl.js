@@ -16,7 +16,7 @@
         growl.innerHTML = options.message;
         
         // Start adding special settings
-        if(options.class) growl.attr('class', options.class_name);
+        if(options.class_name) growl.attr('class', options.class_name);
         if(options.id) growl.attr('id', options.id);
         
         // Start appending data
