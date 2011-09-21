@@ -16,7 +16,7 @@
         growl.innerHTML = options.message;
         
         // Start adding special settings
-        if(options.class) growl.attr('class', options.class);
+        if(options.class) growl.attr('class', options.class_name);
         if(options.id) growl.attr('id', options.id);
         
         // Start appending data
@@ -28,6 +28,11 @@
         else {
             $(this).append(growl);
         }
+        
+        // Fadeout Action
+        if(options.fadeOut != false) {
+        	$(growl).delay(options.fadeDelay).fadeOut(options.fadeOut);
+        }
     
     };
     
@@ -35,8 +40,9 @@
     $.fn.growl.defaults = {
         fadeIn: 1000,
         fadeOut: 1000,
+        fadeDelay: 5000,
         message: false,
-        class: false,
+        class_name: false,
         id: false
     };
 
