@@ -1,5 +1,5 @@
 // jQuery Growl Plugin
-// version 0.1 alpha
+// version 1.0
 // copyright 2011 Shane Perreault [shaneprrlt@gmail.com]
 // registed under MIT License
 
@@ -31,7 +31,8 @@
         
         // Fadeout Action
         if(options.fadeOut != false) {
-        	$(growl).delay(options.fadeDelay).fadeOut(options.fadeOut);
+        	$(growl).delay(options.fadeDelay)
+                    .fadeOut(options.fadeOut);
         }
     
     };
